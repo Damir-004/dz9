@@ -1,0 +1,207 @@
+*,
+::before,
+::after{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+button{
+  cursor: pointer;
+}
+
+img{
+  width: 120px;
+  height: 120px;
+  border: 0.1px solid rgb(190, 190, 190);
+  border-radius: 10px;
+  margin: 15px;
+}
+.app-top{
+  height: 50px;
+  background: #0c0c20;
+  display: flex;
+  align-items: center;
+  padding:0 15px;
+}
+.app-top span:nth-child(1){
+  color: rgb(165, 165, 165);
+}
+.app-top span:nth-child(2){
+  color: white;
+  padding:0 15px;
+}
+
+.app-bottom{
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+.app-bottom_left{
+  width: 50%;
+}
+.app-bottom_left ul{
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.app-bottom_right{
+  width: 45%;
+  height: auto;
+}
+.title{
+  display: flex;  
+  justify-content: space-between;
+}
+.pizza-price{
+  min-width: 50px;
+  background: #0c0c20;
+  border-radius: 15px;
+  padding: 5px 10px;
+  color: white;
+}
+.btn-res{
+  background: orange;
+  padding: 7px;
+}
+.li{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  padding: 15px;
+  border: 0.5px solid rgb(196, 196, 196);
+  border-radius: 7px;
+}
+.box-btns{
+  margin-top: 7px;
+}
+.btn{
+  width: 40px;
+  height:40px;
+  align-items: center;
+  color: white;
+  border-radius: 5px;
+  font-size: 28px;
+}
+.btn-ms{
+  background: red;
+}
+.li-total{
+  margin-top: -15px;
+  padding:10px 15px;
+}
+.btn-ps{
+  background: rgb(43, 255, 0);
+}
+.total{
+  padding: 20px ;
+  background: #dfdfdf;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.total-span{
+  padding-left: 20px;
+}
+.btns-top, .btns-bottom{
+  padding: 20px;
+  margin: 7px 0;
+  border:1px solid #dfdfdf;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.btns button{
+  padding: 15px;
+  font-size: 20px;
+  border-radius: 7px;
+  color: white;
+  background: #0c0c20;
+}
+.btns-top button:nth-child(1){
+  background: rgb(43, 255, 0);
+}
+.btns-top button:nth-child(2){
+  background: rgb(0, 38, 255);
+}
+span{
+  font-size: 20px;
+}
+
+.checkout{
+  width: 100%;
+  height: 100vh;
+  background: rgb(0, 0, 0);
+  z-index: 99;
+  opacity: 0.9;
+  position: fixed;
+  top: 0;
+}
+.checkout .checkout-content{
+  width: 30%;
+  background: white;
+  border-radius: 10px;
+  color: black;
+  text-align: center;
+  position: relative;
+  margin: 10% auto;
+  padding: 25px;
+}
+.bottom__btn{
+  padding: 7px 0;
+}
+.load{
+  width: 100%;
+  height: 100vh;
+  background: rgb(0, 0, 0);
+  z-index: 99;
+  opacity: 0.9;
+  position: fixed;
+  top: 0;
+}
+.load .load-content{
+  width: 30%;
+  background: white;
+  color: black;
+  position: relative;
+  margin: 10% auto;
+  padding: 25px;
+}
+.load input{
+  border: 0.1px solid rgb(209, 209, 209);
+}
+.load span{
+  padding:0 7px ;
+  border: 1px solid black;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.load button{
+  background: rgb(129, 214, 0);
+  color: white;
+}
+.load input, button{
+  font-size: 20px;
+  padding: 7px;
+  margin: 0 5px;
+}
+
+
+.bottom__btn button{
+  background: #0c0c20;
+  border-radius: 7px;
+  color: white;
+  padding: 15px;
+  margin: 0 10px;
+  font-size: 20px;
+}
+.bottom__btn button:nth-child(1){
+  background: rgb(255, 196, 0);
+}
+.bottom__btn button:nth-child(2){
+  background: rgb(30, 255, 0);
+}
