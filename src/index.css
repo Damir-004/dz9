@@ -205,3 +205,103 @@ span{
 .bottom__btn button:nth-child(2){
   background: rgb(30, 255, 0);
 }
+
+/*CheckoutInfo*/
+
+.checkout-info{
+  width: 100%;
+  height: auto;
+  background: white;
+  position: relative;
+  top: 0;
+}
+.container{
+  width: 65%;
+  margin: 50px auto;
+  padding: 7px;
+}
+.container ul{
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.container ul li{
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+  padding: 5px;
+  border: 0.1px solid rgb(114, 255, 109);
+  border-radius: 5px;
+}
+h1{
+  text-align: center;
+  padding: 20px 0;
+}
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.info span{
+  width: 10%;
+}
+.info input, .coupon input{
+  width: 90%;
+  border: 0.1px solid grey;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+.delivery{
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+select{
+  width: 60%;
+  border: 0.1px solid grey;
+}
+
+.note{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.note span{
+  width: 20%;
+}
+textarea{
+  width: 75%;
+  border: 0.1px solid grey;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.client{
+  margin: 15px 0;
+}
+.client input{
+  margin-left:10px ;
+}
+label{
+  font-size: 25px;
+}
+.coupon{
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+.info-button{
+  display: flex ;
+  justify-content: end;
+}
+
+.info-button button{
+  background: gray;
+  border-radius: 7px;
+  color: white;
+  font-size: 25px;
+  padding: 10px;
+}
+.info-button button:nth-child(2){
+  background: rgb(53, 53, 255);
+}

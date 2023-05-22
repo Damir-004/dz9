@@ -22,11 +22,10 @@ const Checkout = ({ setCheckout, setCheckoutInfo, state }) => {
         <span>Continue to checkout?</span>
         <div className="bottom__btn">
           <button onClick={() => setCheckout(false)}>Cancel</button>
-          <button onClick={() => setCheckoutInfo(true)}>Continue</button>
+          <button onClick={() => setCheckoutInfo(true) || setCheckout(false)}>Continue</button>
         </div>
       </div>
     </div>
   );
 };
-
 export default Checkout;

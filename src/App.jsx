@@ -1,6 +1,7 @@
 import React, { useReducer, useState } from "react";
-import Checkout from "./components/Checkout.jsx";
-import Load from "./components/Load.jsx";
+import Checkout from "./components/Checkout";
+import CheckoutInfo from "./components/CheckoutInfo";
+import Load from "./components/Load";
 import Product from "./Product";
 import reducer from "./reducer";
 import { Context } from "./Context";
@@ -8,15 +9,20 @@ import HeaderBottom from "./components/HeaderBottom";
 
 function App() {
   const [state, dispatch] = useReducer(reducer, Product);
-  const [load, setLoad] = useState(false);
-  const [checkout, setCheckout] = useState(false);
   const [randomID, setRandomID] = useState(""); 
   const [randomCoupon, setRandomCoupon] = useState("");
+  const [load, setLoad] = useState(false);
+  const [checkout, setCheckout] = useState(false);
+  const [checkoutInfo, setCheckoutInfo] = useState(false);
   const add = (obj) => {
     dispatch({ type: "add", payload: obj });
   };
   const del = (obj) => {
     dispatch({ type: "del", payload: obj });
+  };
+  const allFalse = () => {
+    setCheckout(false);
+    setCheckoutInfo(false);
   };
   const random = () => {
     let alphabet = "ABCDEFGHIKLMNOPQRSTVWXYZabcdefghiklmnopqrstvwxz123456789";
@@ -63,9 +69,13 @@ function App() {
         ) : null}
         {checkout ? (
           <Checkout
-            setCheckout={setCheckout}
             state={state}
+            setCheckout={setCheckout}
+            setCheckoutInfo={setCheckoutInfo}
           />
+        ) : null}
+        {checkoutInfo ? (
+          <CheckoutInfo allFalse={allFalse} state={state} />
         ) : null}
       </div>
     </Context.Provider>
