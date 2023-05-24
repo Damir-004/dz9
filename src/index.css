@@ -31,7 +31,10 @@ img{
 }
 .app-top span:nth-child(2){
   color: white;
-  padding:0 15px;
+}
+.app-top span{
+  cursor: pointer;
+  margin:0 15px;
 }
 
 .app-bottom{
@@ -236,6 +239,10 @@ h1{
   text-align: center;
   padding: 20px 0;
 }
+.bottom_main-box{
+  width: 60%;
+  margin: 100px auto;
+}
 .info {
   display: flex;
   justify-content: space-between;
@@ -292,7 +299,7 @@ label{
 }
 .info-button{
   display: flex ;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .info-button button{
@@ -304,4 +311,11 @@ label{
 }
 .info-button button:nth-child(2){
   background: rgb(53, 53, 255);
+}
+
+
+
+
+.error{
+  color: red;
 }

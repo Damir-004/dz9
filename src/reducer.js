@@ -46,12 +46,7 @@ export default function reducer (state, action) {
       newObj[0].pizza.id = action.payload;
       const oldObj = JSON.parse(JSON.stringify(state));
       state = oldObj;
-      oldObj[0].pizza.price = 3;
       oldObj[0].pizza.id = "";
-      oldObj[0].pizza.ingredients.map((obj) => {
-        obj.total = 0;
-        return obj;
-      });
       state.push(newObj[0]);
       return state;
 
