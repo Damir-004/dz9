@@ -1,5 +1,21 @@
 export default function reducer (state, action) {
   switch (action.type) {
+    case "del":
+      const stateCopy = [...state];
+      const pizzaCopy = {...stateCopy[0].pizza};
+      let foundIngredient = false;
+      pizzaCopy.ingredients = pizzaCopy.ingredients.map((ingredient) => {
+        if (ingredient === action.payload && ingredient.total > 0) {
+          foundIngredient = true;
+          return {...ingredient, total: ingredient.total - 1};
+        }
+        return ingredient;
+      });
+      if (foundIngredient) {
+        pizzaCopy.price = pizzaCopy.price - action.payload.price;
+      }
+      stateCopy[0].pizza = pizzaCopy;
+      return stateCopy;
     case "add":
       return [
         {
@@ -8,21 +24,6 @@ export default function reducer (state, action) {
             price: state[0].pizza.price + action.payload.price,
             ingredients: state[0].pizza.ingredients.map((obj) =>
               obj === action.payload ? { ...obj, total: obj.total + 1 } : obj
-            ),
-          },
-        },
-      ];
-    case "del":
-      return [
-        {
-          pizza: {
-            ...state[0].pizza,
-            price:
-              action.payload.total >= 0
-                ? state[0].pizza.price - action.payload.price
-                : state[0].pizza.price,
-            ingredients: state[0].pizza.ingredients.map((obj) =>
-              obj === action.payload ? { ...obj, total: obj.total - 1 } : obj
             ),
           },
         },

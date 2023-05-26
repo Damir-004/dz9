@@ -26,10 +26,7 @@ const CheckoutInfo = ({ allFalse, state }) => {
                 }
             })}
             </ul>
-            </div>
             <h1>Checkout info:</h1>
-            
-            <div>
                 <Formik
                     initialValues={{ email: '' }}
                     validationSchema={validationSchema}
@@ -83,7 +80,8 @@ const CheckoutInfo = ({ allFalse, state }) => {
                 </Form>
                 )}
             </Formik>
-        </div>
+            
+            </div>
     </div>
   );
 };
