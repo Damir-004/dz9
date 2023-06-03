@@ -1,4 +1,4 @@
-import React, { useReducer, useState } from "react";
+import React, { useReducer, useState, useEffect } from "react";
 import Checkout from "./components/Checkout";
 import CheckoutInfo from "./components/CheckoutInfo";
 import Load from "./components/Load";
@@ -37,7 +37,7 @@ function App() {
   const loadPizza = () => {
     if (randomCoupon === randomID) {
       dispatch({ type: "load", payload: randomID });
-      console.log("1");
+      console.log("10");
     }
   };
   const value = {
@@ -50,6 +50,10 @@ function App() {
     setLoad,
     randomID,
   };
+
+  useEffect(() => {
+    localStorage.setItem("state", JSON.stringify(state));
+  }, [state]);
 
   return (
     <Context.Provider value={value}>
@@ -83,3 +87,6 @@ function App() {
 }
 
 export default App;
+
+
+

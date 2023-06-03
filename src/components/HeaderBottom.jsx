@@ -8,7 +8,7 @@ const HeaderBottom = () => {
     navigator.clipboard.writeText(text);
     alert("Текст скопирован: " + text);
   }
-  const {  state, dispatch, random, setCheckout, setLoad, randomID} =
+  const {state, dispatch, random, setCheckout, setLoad, randomID} =
   useContext(Context);
   return (
     <div className="app-bottom">

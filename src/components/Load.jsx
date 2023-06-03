@@ -1,6 +1,6 @@
 import React from "react";
 
-const Load = ({ setLoad, setRandomCoupon, loadPizza, randomCoupon }) => {
+const Load = ({ setLoad, setRandomCoupon, loadPizza}) => {
   return (
     <div className="load">
       <div className="load-content">

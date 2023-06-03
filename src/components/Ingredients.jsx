@@ -14,6 +14,7 @@ const Ingredients = () => {
             <div className="box-btns">
               <button className="btn-ms btn" onClick={() => del(obj)}>-</button>
               <span className="li-total">{obj.total}</span>
+              
               <button className="btn-ps btn" onClick={() => add(obj)}>+</button>
             </div>
           </li>
